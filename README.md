@@ -1,20 +1,32 @@
 # mongodb_public_health_pipeline
 ## Introduction
-This project simulates the migration of a commmunity health survey dataset from a relational database strucutre into MongoDB, showcasing the flexibility of document-based data modeling for healthcare workflows. It's designed to reflect real-world public health and clinical data use cases, with a focus on data integrity, schema design, and python-based automation. 
+This project involves the migration of a real-world public health survey dataset from a relational database strucutre into a NoSQL database (MongoDB). It showcases how document-based modeling can support dynamic and evolving health data, focusing on schema design, data integrity, and Python-based automation. 
 
-## Project Overview
-The fictional dataset mimics responses from a community health survey involving patient demographics, visit records, and self-reported health metrics. The project simulates:
-* A relational-style data source (CSV tables)
-* A fully document-oriented schema in MongoDB
-* Python scripts to migrate, validate, and audit the data
-* Modular design for future expansion (e.g. visualization, analysis)
+## Dataset Overview
+### CDC Behavioral Risk Factor Surveillance System (BRFSS), 2023
+The  dataset chosen for this project is from the publicly available CDC Behavioral Risk Factor Surveillance System (BRFSS). This nationwide survey collects data on health-related risk behaviors, chronic health conditions, and preventive service use across the U.S.
+
+- Over **430,000+ records**
+- Covers demographics, general health, chronic disease, habits (smoking, exercise), and healthcare access
+- Downloaded in **SAS Transport Format (XPT)** and transformed into tabular CSVs
+
+[Explore the dataset source](https://www.cdc.gov/brfss/annual_data/annual_2023.html)
+
+## Project Pipeline
+This project transforms BRFSS relational data into a document-oriented schema using MongoDB.
+Some features of this project include:
+
+- CSV exports from SAS/XPT format
+- Structured schema models for `patients`,  survey_responses`, and optional `visits`
+- Python scripts to handle ETL (Extract, Transform, Load)
+- Validation checks for referential integrity & data consistency
 
 ## Features & Tools
 ### Schema Modeling
 * Designed MongoDB collections for:
-  * `patients` (demographics, contact info)
-  * `visits` (linked records of clinic visits)
-  * `survey_responses` (structured health survey responses)
+  * `patients` - demographics, contact infO
+  * `survey_responses` - BRFSS variables per participant
+  * **(Optional) `visits`** 
  
 ## Python Automation
 * Data generation using `Faker` + `Pandas`
