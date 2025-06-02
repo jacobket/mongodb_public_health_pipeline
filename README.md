@@ -23,7 +23,7 @@ Some features of this project include:
 
 ## Features & Tools
 ### Schema Modeling
-* Designed MongoDB collections for:
+Designed MongoDB collections for simulating public health workflows:
   * `patients` - demographics, contact infO
   * `survey_responses` - BRFSS variables per participant
   * **(Optional) `visits`** 
@@ -56,16 +56,17 @@ I am using this project to explore scalable data management for public health/ b
 
 ```
 ## Project Structure
+community_health_db/
 |-- data/
-|   |-- patients.csv
-|   |-- visits.csv
-|   |__ survey_responses.csv
+|   |-- LLCP2023.XPT
+|-- notebooks/
+|   |__ eda_brfss2023.ipynb
 |-- scripts/
-|   |-- migrate_to_mongo.py
-|   |--validate_data.py
-|   |__ generate_mock_data.py
+|   |__ mongo_import.py
 |-- mongo_schemas.md
 |-- README.md
+|-- requirements.txt
+|__ .gitignore
 ```
 
 ## Contact
