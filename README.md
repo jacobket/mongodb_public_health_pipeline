@@ -56,7 +56,7 @@ I am using this project to explore scalable data management for public health/ b
 
 ```
 ## Project Structure
-community_health_db/
+mongodb_public_health_pipeline/
 |-- data/
 |   |-- LLCP2023.XPT
 |-- notebooks/
